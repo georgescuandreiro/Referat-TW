@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+canvas {
+    border: 1px solid #000;
+}
+
+#menu, #config {
+    text-align: center;
+}
+
+#config input {
+    display: block;
+    margin: 10px auto;
+}
+
+#hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+#hud div {
+    margin-bottom: 5px;
+}
+
+#gameOverButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 20px;
+    display: none;
+}
+

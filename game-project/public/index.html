@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Square Hunter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Green Square Hunter</h1>
+        <button onclick="startGame()">START</button>
+        <button onclick="showConfig()">CONFIGURARE</button>
+        <button onclick="showHighscores()">HIGHSCORE</button>
+    </div>
+    <div id="config" style="display: none;">
+        <h2>Configurare</h2>
+        <label for="enemySpeed">Viteza inamicilor:</label>
+        <input type="number" id="enemySpeed" name="enemySpeed" value="2">
+        <label for="objectSpawnInterval">Interval de generare a obiectelor (secunde):</label>
+        <input type="number" id="objectSpawnInterval" name="objectSpawnInterval" value="1">
+        <label for="objectSplitTime">Timp de divizare a obiectelor (secunde):</label>
+        <input type="number" id="objectSplitTime" name="objectSplitTime" value="15">
+        <label for="enemyLifespan">Timp până la dispariția inamicilor (secunde):</label>
+        <input type="number" id="enemyLifespan" name="enemyLifespan" value="15">
+        <label for="objectMaxSplits">Număr maxim de divizări ale obiectelor:</label>
+        <input type="number" id="objectMaxSplits" name="objectMaxSplits" value="2">
+        <button onclick="saveConfig()">Salvează</button>
+        <button onclick="showMenu()">Înapoi</button>
+    </div>
+    <div id="highscores" style="display: none;">
+        <h2>Highscores</h2>
+        <ul id="highscoreList"></ul>
+        <button onclick="showMenu()">Înapoi</button>
+    </div>
+    <div id="hud" style="display: none;">
+        <div id="score">Scor: 0</div>
+        <div id="timer">Timp: 0</div>
+        <div id="health">Viață: 100</div>
+    </div>
+    <canvas id="gameCanvas" style="display: none;"></canvas>
+    <button id="gameOverButton" style="display: none;" onclick="showMenu()">Game Over</button>
+    <script src="game.js"></script>
+</body>
+</html>
+
